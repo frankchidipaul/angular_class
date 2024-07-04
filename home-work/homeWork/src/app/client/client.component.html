@@ -1,0 +1,24 @@
+<p>client works!</p>
+
+<h1>this is all todo</h1>
+<div *ngIf='loading'>
+    <h1>loading....</h1>
+
+</div>
+<!-- <section class="example-section">
+    <mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</mat-checkbox>
+</section> -->
+
+<button mat-button (click)="openDialog()">Open dialog</button>
+
+<div *ngFor="let info of todo;">
+    <button mat-raised-button color="warn">Basic</button>
+
+
+    <p>{{info.id}}</p>
+    <button (click)="viewOne(info.id)">{{info.todo}}</button>
+    <!-- <p>{{info.UserId}}</p> -->
+
+
+</div>

@@ -1,0 +1,43 @@
+<body class="">
+    <nav class="p-2 bg-white shadow md:flex md:items-center md:justify-between">
+        <div>
+            <span class="text-3x1 font-[poppins]">
+                <img class="h-20 inline " src="../../assets/d5ea7077bc2c1775edfda58a8d50ae26.jpg" alt="">
+            </span>
+
+
+        </div>
+        <ul class="md:flex md:items-center">
+            <li class="mx-4">
+                <a routerLink="dah" class="text-x1 hover:text-cyan-500 duration-500">Home</a>
+            </li>
+            <li class="mx-4">
+                <a routerLink="/login" class="text-x1 hover:text-cyan-500 duration-500">Services</a>
+            </li>
+            <li class="mx-4"><a routerLink="/client" href="#" class="text-x1 hover:text-cyan-500 duration-500">About</a>
+            </li>
+            <li class="mx-4"><a href="#" class="text-x1 hover:text-cyan-500 duration-500 ">Contact</a></li>
+
+            <div *ngIf="!isLoggedIn()">
+                <a routerLink="login"><button
+                        class="bg-cyan-400 text-white font-[poppins] duration-500 px-5 py-2 mx-4 rounded">Login</button>
+                </a>
+                <a routerLink="home"><button
+                        class="bg-cyan-400 text-white font-[poppins] duration-500 px-5 py-2 mx-4 rounded">Signup</button>
+                </a>
+            </div>
+
+            <div *ngIf="isLoggedIn()">
+                <button routerLink="login"
+                    class="bg-cyan-400 text-white font-[poppins] duration-500 px-6 py-2 mx-4 rounded"
+                    (click)="logout()">Log
+                    out</button>
+
+            </div>
+
+        </ul>
+
+    </nav>
+
+
+</body>
